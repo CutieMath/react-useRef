@@ -15,6 +15,9 @@ function App() {
 
   // 2.
   // useRef can be used to store a reference to a DOM element.
+  function focus() {
+    inputRef.current.focus();
+  }
 
   return (
     <>
@@ -25,6 +28,7 @@ function App() {
       />
       <div>My name is {nameState}</div>
       <div>I have been rendered {rederCount.current} times</div>
+      <button onClick={focus}>Focus my mouse</button>
     </>
   );
 }
